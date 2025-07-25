@@ -1,5 +1,9 @@
 # esp-idf-lib/ina260
 
+[![Build examples](https://github.com/esp-idf-lib/ina260/actions/workflows//build.yml/badge.svg)](https://github.com/esp-idf-lib/ina260/actions/workflows//build.yml)
+[![Build docs](https://github.com/esp-idf-lib/ina260/actions/workflows//build-docs.yml/badge.svg)](https://github.com/esp-idf-lib/ina260/actions/workflows//build-docs.yml)
+[![Validation](https://github.com/esp-idf-lib/ina260/actions/workflows//validate-component.yml/badge.svg)](https://github.com/esp-idf-lib/ina260/actions/workflows//validate-component.yml)
+
 Driver for INA260 precision digital current and power monitor.
 
 * [Documentation](https://esp-idf-lib.github.io/ina260/)
@@ -11,7 +15,7 @@ Driver for INA260 precision digital current and power monitor.
 ## Installation
 
 ```sh
-idf.py add-dependency esp-idf-lib/ina260^1.0.0
+idf.py add-dependency esp-idf-lib/ina260
 ```
 
 ## Support
