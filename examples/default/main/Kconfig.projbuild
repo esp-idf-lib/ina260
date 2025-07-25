@@ -9,5 +9,5 @@ menu "Example configuration"
             datasheet. ina260.h provides a uitility macro for the address
             (INA260_ADDR()).
 
-    rsource "../../../../devtools/Kconfig.i2c"
+    rsource "../../../Kconfig.i2c"
 endmenu
