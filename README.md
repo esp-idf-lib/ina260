@@ -11,7 +11,7 @@ Driver for INA260 precision digital current and power monitor.
 ## Installation
 
 ```sh
-idf.py add-dependency "esp-idf-lib/ina260^1.0.0
+idf.py add-dependency esp-idf-lib/ina260^1.0.0
 ```
 
 ## Support
