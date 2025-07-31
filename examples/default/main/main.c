@@ -33,7 +33,7 @@ void task(void *pvParameters)
     printf("Configuring ina260\n");
     // Triggered mode, 128 samples, 1.1 ms conversion time (~150 ms)
     ESP_ERROR_CHECK(ina260_set_config(&dev, INA260_MODE_TRIG_SHUNT_BUS, INA260_AVG_128,
-            INA260_CT_1100, INA260_CT_1100));
+                                      INA260_CT_1100, INA260_CT_1100));
 
     wait_for_sensor(&dev);
 
@@ -51,7 +51,7 @@ void task(void *pvParameters)
          * sdkconfig. See sdkconfig.defaults.esp32 and
          * sdkconfig.defaults.esp8266  */
         printf("VBUS: %.04f V, IBUS: %.04f mA, PBUS: %.04f mW\n",
-                voltage, current * 1000, power * 1000);
+               voltage, current * 1000, power * 1000);
 
         vTaskDelay(pdMS_TO_TICKS(500));
     }

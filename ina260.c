@@ -115,7 +115,7 @@ esp_err_t ina260_init_desc(ina260_t *dev, uint8_t addr, i2c_port_t port, gpio_nu
     CHECK_ARG(dev);
 
     if (addr < INA260_ADDR(INA260_ADDR_PIN_GND, INA260_ADDR_PIN_GND)
-        || addr > INA260_ADDR(INA260_ADDR_PIN_SCL, INA260_ADDR_PIN_SCL))
+            || addr > INA260_ADDR(INA260_ADDR_PIN_SCL, INA260_ADDR_PIN_SCL))
     {
         ESP_LOGE(TAG, "Invalid I2C address");
         return ESP_ERR_INVALID_ARG;
@@ -175,10 +175,10 @@ esp_err_t ina260_set_config(ina260_t *dev, ina260_mode_t mode, ina260_averaging_
               && ish_ct <= INA260_CT_8244);
 
     dev->config = DEF_CONF
-            | (avg_mode << BIT_AVG)
-            | (vbus_ct << BIT_VBUSCT)
-            | (ish_ct << BIT_ISHCT)
-            | (mode << BIT_MODE);
+                  | (avg_mode << BIT_AVG)
+                  | (vbus_ct << BIT_VBUSCT)
+                  | (ish_ct << BIT_ISHCT)
+                  | (mode << BIT_MODE);
 
     return write_reg_16(dev, REG_CONFIG, dev->config);
 }
