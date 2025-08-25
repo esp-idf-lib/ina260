@@ -266,11 +266,11 @@ esp_err_t ina260_get_status(ina260_t *dev, bool *ready, bool *alert, bool *overf
     CHECK(read_reg_16(dev, REG_MASK_EN, &val));
 
     if (ready)
-        *ready = val & BIT_CVRF ? 1 : 0;
+        *ready = val & BV(BIT_CVRF) ? 1 : 0;
     if (alert)
-        *alert = val & BIT_AFF ? 1 : 0;
+        *alert = val & BV(BIT_AFF) ? 1 : 0;
     if (overflow)
-        *overflow = val & BIT_OVF ? 1 : 0;
+        *overflow = val & BV(BIT_OVF) ? 1 : 0;
 
     return ESP_OK;
 }
