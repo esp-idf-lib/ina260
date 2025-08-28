@@ -1,5 +1,5 @@
 ---
-version: 1.0.9
+version: 1.0.10
 description: Driver for INA260 precision digital current and power monitor
 license: BSD-3
 targets:
